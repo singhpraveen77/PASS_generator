@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useRef } from 'react'
 import { useCallback } from 'react'
 import { useState } from 'react'
 
@@ -7,8 +8,12 @@ function App() {
   const [length, setlenght] = useState(5)
   const [specials, setspecials] = useState(false)
   const [nums, setnums] = useState(false)
+  const[copytxt,setcopytxt]=useState('copy')
+  const[clss,setclss]=useState('cpp')
 
   let pass_generator=useCallback(()=>{
+    setcopytxt('copy')
+    setclss('cpp')
     let pasw=""
     let sec="ABCDEFGHTIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     if(nums)sec+="1234567890"
@@ -29,6 +34,18 @@ function App() {
   useEffect(()=>
     pass_generator(),
   [length,specials,nums,setpass])
+
+  let passref=useRef(null)
+
+  let copy=useCallback(()=>{
+    setcopytxt("✔");
+    setclss('cpped')
+    
+    passref.current?.select()
+    window.navigator.clipboard.writeText(pass);
+
+
+  },[pass])
 
 
 
@@ -64,16 +81,22 @@ function App() {
 
         <input type="text" placeholder='passinng....'
         value={pass}
+        ref={passref}
        
         style={{
           borderRadius:"20px",
           // boxShadow:"50px",
           height:"4vh",
-          width:"80%",
+          width:"70%",
           fontSize:"2.6vh",
           padding:".5vh"
 
         }} />
+        <button onClick={copy}
+        className={clss}
+        >
+          {copytxt}
+        </button>
         <br />
 
         <input type="checkbox" 

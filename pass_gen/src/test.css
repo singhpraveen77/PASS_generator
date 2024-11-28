@@ -1,4 +1,45 @@
-*{
-    height: fit-content;
-    background-color: rgb(94, 55, 118);
-}
+
+.cpp {
+    margin-left: 1rem;
+    /* margin-top: 1rem; */
+    border-radius: 50px;
+    height: 2.5rem;
+    width: 6rem;
+    background-color: #4c57af; /* Green background */
+    color: white; /* White text */
+    border: none;
+    /* border-radius: 5px; Rounded corners */
+    /* padding: 10px 20px; Padding for size */
+    /* font-size: 1.2em; Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Box shadow */
+
+  }
+  
+  .cpp:hover {
+    background-color: #07fd14; /* Darker green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased shadow on hover */
+
+  }
+
+  .cpped{
+    margin-left: 1rem;
+    /* margin-top: 1rem; */
+    border-radius: 50px;
+    height: 2.5rem;
+    width: 6rem;
+    background-color: #4c57af; /* Green background */
+    color: white; /* White text */
+    border: none; 
+    /* border-radius: 5px; Rounded corners */
+    /* padding: 10px 20px; Padding for size */
+    /* font-size: 1.2em; Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Maintain box shadow */
+
+    
+    background-color: #0d5711;
+
+  }
